@@ -1,6 +1,6 @@
 {
-    "name": "nevadskiy/laravel-geonames",
-    "description": "The package allows integrating geonames database with a Laravel application.",
+    "name": "imcity-tech/laravel-geonames",
+    "description": "[fork] The package allows integrating geonames database with a Laravel application.",
     "license": "MIT",
     "keywords": ["geonames", "geo", "database", "countries", "cities", "laravel"],
     "authors": [
@@ -10,12 +10,12 @@
         }
     ],
     "require": {
-        "php": "^7.2|^8.0",
+        "php": "^8.0",
         "ext-zip": "*",
         "ext-json": "*",
-        "laravel/framework": "^7.0|^8.0",
-        "nevadskiy/laravel-translatable": "^0.7",
-        "nevadskiy/laravel-uuid": "^0.7"
+        "laravel/framework": "^9.0",
+        "imcity-tech/laravel-translatable": "^0.7",
+        "imcity-tech/laravel-uuid": "^0.7"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.0",
@@ -24,18 +24,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Nevadskiy\\Geonames\\": "src/"
+            "imCITY-tech\\Geonames\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Nevadskiy\\Geonames\\Tests\\": "tests/"
+            "imCITY-tech\\Geonames\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Nevadskiy\\Geonames\\GeonamesServiceProvider"
+                "imCITY-tech\\Geonames\\GeonamesServiceProvider"
             ]
         }
     },
