@@ -14,8 +14,8 @@
         "ext-zip": "*",
         "ext-json": "*",
         "laravel/framework": "^9.0",
-        "imcity-tech/laravel-translatable": "^0.7",
-        "imcity-tech/laravel-uuid": "^0.7"
+        "imcity-tech/laravel-translatable": "^0.8",
+        "imcity-tech/laravel-uuid": "^0.8"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.0",
@@ -24,18 +24,18 @@
     },
     "autoload": {
         "psr-4": {
-            "imCITY-tech\\Geonames\\": "src/"
+            "Nevadskiy\\Geonames\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "imCITY-tech\\Geonames\\Tests\\": "tests/"
+            "Nevadskiy\\Geonames\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "imCITY-tech\\Geonames\\GeonamesServiceProvider"
+                "Nevadskiy\\Geonames\\GeonamesServiceProvider"
             ]
         }
     },
