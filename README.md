@@ -7,6 +7,8 @@ The package allows integrating geonames database with a Laravel application.
 
 ## 🗒️ Description
 
+**This package is a fork of nevadskiy/laravel-translatable.**
+
 The package is very useful for applications that rely on the geo data.
 
 By default, the package provides 5 tables: `continents`, `countries`, `divisions`, `cities` and `translations` and fills them with data from the [geonames](https://www.geonames.org/) service.
@@ -27,8 +29,8 @@ composer require nevadskiy/laravel-geonames
 
 ## ✅ Requirements
 
-- Laravel `7.0` or newer
-- PHP `7.2` or newer
+- Laravel `9.0` or newer
+- PHP `8.0` or newer
 
 
 ## 🔨 Usage
