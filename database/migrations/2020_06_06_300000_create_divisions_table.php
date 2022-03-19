@@ -27,7 +27,7 @@ class CreateDivisionsTable extends Migration
             $table->string('timezone_id', 32)->nullable()->index();
             $table->bigInteger('population')->unsigned()->nullable();
             //$table->smallInteger('elevation')->unsigned()->nullable()->comment('In meters.');
-            $table->string('elevation')->nullable()->comment('In meters.'); // changed from smallInteger('elevation')->unsigned() to string to avoid db error "Numeric value out of range: 1264
+            $table->string('elevation', 12)->nullable()->comment('In meters.'); // changed from smallInteger('elevation')->unsigned() to string to avoid db error "Numeric value out of range: 1264
             $table->smallInteger('dem')->nullable()->comment('Digital elevation model, srtm3 or gtopo30.');
             $table->string('code', 20)->comment('Geonames code of administrative division.');
             $table->string('feature_code', 10)->nullable()->comment('See: https://www.geonames.org/export/codes.html');
