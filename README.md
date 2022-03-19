@@ -17,13 +17,13 @@ It also allows to keep the data **up-to-date**, so the package fetches all daily
 
 You can also set up the package to seed only data that belongs to specific countries, disable unneeded tables, set up minimal population filter and use your own custom models.
 
-Translations are powered by the [nevadskiy/laravel-translatable](https://github.com/nevadskiy/laravel-translatable).
+Translations are powered by the [imcity-tech/laravel-translatable](https://github.com/imcity-tech/laravel-translatable).
 
 
 ## 🔌 Installation
 
 ```bash
-composer require nevadskiy/laravel-geonames
+composer require imcity-tech/laravel-geonames
 ```
 
 
