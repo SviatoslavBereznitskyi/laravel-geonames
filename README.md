@@ -7,7 +7,7 @@ The package allows integrating geonames database with a Laravel application.
 
 ## 🗒️ Description
 
-**This package is a fork of nevadskiy/laravel-translatable.**
+**This package is a fork of nevadskiy/laravel-geonames.**
 
 The package is very useful for applications that rely on the geo data.
 
