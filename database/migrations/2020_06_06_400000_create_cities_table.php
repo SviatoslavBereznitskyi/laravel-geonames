@@ -16,15 +16,18 @@ class CreateCitiesTable extends Migration
     public function up(): void
     {
         Schema::create(City::TABLE, static function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
+            //$table->uuid('id')->primary();
             $table->string('name');
 
             if (app(Geonames::class)->shouldSupplyCountries()) {
-                $table->foreignUuid('country_id')->index()->references('id')->on(Country::TABLE)->cascadeOnDelete();
+                //$table->foreignUuid('country_id')->index()->references('id')->on(Country::TABLE)->cascadeOnDelete();
+                $table->foreignId('country_id')->index()->constrained()->onDelete('cascade');
             }
 
             if (app(Geonames::class)->shouldSupplyDivisions()) {
-                $table->foreignUuid('division_id')->index()->nullable()->references('id')->on(Division::TABLE)->cascadeOnDelete();
+                //$table->foreignUuid('division_id')->index()->nullable()->references('id')->on(Division::TABLE)->cascadeOnDelete();
+                $table->foreignId('division_id')->index()->nullable()->constrained()->onDelete('cascade');
             }
 
             $table->decimal('latitude', 10, 7);

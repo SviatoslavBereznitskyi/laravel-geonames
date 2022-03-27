@@ -15,7 +15,6 @@
         "ext-json": "*",
         "laravel/framework": "^9.0",
         "imcity-tech/laravel-translatable": "^0.8",
-        "imcity-tech/laravel-uuid": "^0.8"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.0",

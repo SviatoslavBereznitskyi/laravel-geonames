@@ -13,7 +13,8 @@ class CreateContinentsTable extends Migration
     public function up(): void
     {
         Schema::create(Continent::TABLE, static function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
+            //$table->uuid('id')->primary();
             $table->string('code', 2)->unique();
             $table->string('name', 50);
             $table->decimal('latitude', 10, 7);

@@ -15,7 +15,8 @@ class CreateCountriesTable extends Migration
     public function up(): void
     {
         Schema::create(Country::TABLE, static function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
+            //$table->uuid('id')->primary();
             $table->string('code', 2)->unique();
             $table->string('iso', 3)->unique();
             $table->string('iso_numeric', 3)->unique();
@@ -26,7 +27,8 @@ class CreateCountriesTable extends Migration
             $table->string('timezone_id', 32)->nullable()->index();
 
             if (app(Geonames::class)->shouldSupplyContinents()) {
-                $table->foreignUuid('continent_id')->index()->references('id')->on(Continent::TABLE)->cascadeOnDelete();
+                //$table->foreignUuid('continent_id')->index()->references('id')->on(Continent::TABLE)->cascadeOnDelete();
+                $table->foreignId('continent_id')->index()->constrained()->onDelete('cascade');
             }
 
             $table->string('capital')->nullable(); // Can be normalized using separate table.

@@ -87,7 +87,7 @@ class CountryDefaultSupplier extends DefaultSupplier implements CountrySupplier
     protected function mapInsertFields(array $data, int $id): array
     {
         return array_merge($this->mapUpdateFields($data, $id), [
-            'id' => Country::generateId(),
+            //'id' => Country::generateId(),
             'geoname_id' => $id,
             'created_at' => now(),
             'updated_at' => now(),

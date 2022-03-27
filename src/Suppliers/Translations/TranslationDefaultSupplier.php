@@ -143,7 +143,7 @@ class TranslationDefaultSupplier implements TranslationSupplier
     protected function mapTranslation(array $translation, Model $model): array
     {
         return [
-            'id' => Translation::generateId(),
+            //'id' => Translation::generateId(),
             'translatable_id' => $model->getKey(),
             'translatable_type' => $model->getMorphClass(),
             'translatable_attribute' => 'name',

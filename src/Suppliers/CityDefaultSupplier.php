@@ -87,7 +87,7 @@ class CityDefaultSupplier extends DefaultSupplier implements CitySupplier
     protected function mapInsertFields(array $data, int $id): array
     {
         return array_merge($this->mapUpdateFields($data, $id), [
-            'id' => City::generateId(),
+            //'id' => City::generateId(),
             'geoname_id' => $id,
             'created_at' => now(),
             'updated_at' => now(),

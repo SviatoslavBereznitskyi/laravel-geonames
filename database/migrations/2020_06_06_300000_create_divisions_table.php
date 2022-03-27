@@ -15,11 +15,13 @@ class CreateDivisionsTable extends Migration
     public function up(): void
     {
         Schema::create(Division::TABLE, static function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
+            //$table->uuid('id')->primary();
             $table->string('name');
 
             if (app(Geonames::class)->shouldSupplyCountries()) {
-                $table->foreignUuid('country_id')->index()->references('id')->on(Country::TABLE)->cascadeOnDelete();
+                //$table->foreignUuid('country_id')->index()->references('id')->on(Country::TABLE)->cascadeOnDelete();
+                $table->foreignId('country_id')->index()->constrained()->onDelete('cascade');
             }
 
             $table->decimal('latitude', 10, 7);
