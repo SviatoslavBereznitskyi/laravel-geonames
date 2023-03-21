@@ -1,5 +1,5 @@
 {
-    "name": "imcity-tech/laravel-geonames",
+    "name": "slivka-b/laravel-geonames",
     "description": "[fork] The package allows integrating geonames database with a Laravel application.",
     "license": "MIT",
     "keywords": ["geonames", "geo", "database", "countries", "cities", "laravel"],
@@ -10,10 +10,10 @@
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "ext-zip": "*",
         "ext-json": "*",
-        "laravel/framework": "^9.0",
+        "laravel/framework": "^10.0",
         "imcity-tech/laravel-translatable": "^0.8",
         "imcity-tech/laravel-uuid": "^0.8"
     },
